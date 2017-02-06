@@ -25,6 +25,10 @@ public class Purchase {
     @Column(nullable = false)
     String category;
 
+
+    @ManyToOne
+    Customer customer;
+
     public Purchase() {
 
     }
@@ -74,5 +78,13 @@ public class Purchase {
 
     public void setCategory(String category) {
         this.category = category;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 }
